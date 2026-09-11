@@ -1,0 +1,5 @@
+# ~/.codex/config.toml — running from a checkout, before nbq-mcp is on PyPI
+[mcp_servers.nbq]
+command = "uv"
+args = ["run", "--directory", "/absolute/path/to/nbq-mcp", "nbq-mcp"]
+env = { NBQ_API_KEY = "PASTE_YOUR_RUNTIME_KEY_HERE" }

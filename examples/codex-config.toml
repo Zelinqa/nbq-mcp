@@ -1,0 +1,5 @@
+# ~/.codex/config.toml
+[mcp_servers.nbq]
+command = "uvx"
+args = ["nbq-mcp"]
+env = { NBQ_API_KEY = "PASTE_YOUR_RUNTIME_KEY_HERE" }
