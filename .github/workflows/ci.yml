@@ -26,11 +26,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      # TODO: switch to `uv sync --group dev --locked` once uv.lock is committed.
-      # It cannot be generated yet: `nbq` 1.0.0 is not on PyPI and the SDK release
-      # branch referenced by [tool.uv.sources] is not pushed.
+      # `nbq` resolves from the SDK release branch pinned in uv.lock until 1.0.0 is on PyPI.
       - name: Install dependencies
-        run: uv sync --group dev
+        run: uv sync --group dev --locked
 
       - name: Lint
         run: uv run ruff check src tests

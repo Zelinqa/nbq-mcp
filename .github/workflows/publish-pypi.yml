@@ -26,9 +26,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      # TODO: add --locked once uv.lock is committed (see .github/workflows/ci.yml).
       - name: Install dependencies
-        run: uv sync --group dev
+        run: uv sync --group dev --locked
 
       - name: Lint
         run: uv run ruff check src tests
