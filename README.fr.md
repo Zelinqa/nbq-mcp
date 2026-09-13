@@ -99,6 +99,11 @@ Ajoutez le bloc de [`examples/codex-config.toml`](examples/codex-config.toml) à
 [mcp_servers.nbq]
 command = "uvx"
 args = ["nbq-mcp"]
+# Codex demande confirmation avant chaque appel d'outil MCP sauf si le serveur
+# approuve ses outils ; en `codex exec` (non interactif) un appel non approuvé
+# est rejeté avec « user cancelled MCP tool call ». Les six outils NBQ n'agissent
+# que sur votre propre NBQ.
+default_tools_approval_mode = "approve"
 env = { NBQ_API_KEY = "PASTE_YOUR_RUNTIME_KEY_HERE" }
 ```
 
