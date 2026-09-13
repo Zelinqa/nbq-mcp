@@ -33,7 +33,7 @@ Once a registry version exists it is immutable and must never be reused.
 
 ## One-time GitHub setup
 
-In `Zelinqa/nbq-mcp`, create a GitHub Actions environment named `pypi`, add Farouk as a
+In `Zelinqa/nbq-mcp`, create a GitHub Actions environment named `pypi`, add the release maintainer as a
 required reviewer, and restrict deployments to the `main` branch.
 
 ## PyPI Trusted Publisher
@@ -57,7 +57,7 @@ downloads the artifact built by the unprivileged job.
 ## Release
 
 1. Update the version in `pyproject.toml` and `src/nbq_mcp/__init__.py` — both must match.
-2. Merge the reviewed release changes into `main`. Only Farouk performs this merge.
+2. Merge the reviewed release changes into `main`. Only the release maintainer performs this merge.
 3. Run **Publish nbq-mcp to PyPI** from `main` with confirmation `publish-nbq-mcp`.
 4. Approve the protected `pypi` environment deployment.
 5. Verify <https://pypi.org/project/nbq-mcp/>, then check the published artefact in a clean
