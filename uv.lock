@@ -913,7 +913,7 @@ wheels = [
 [[package]]
 name = "nbq"
 version = "1.0.0"
-source = { git = "https://github.com/Zelinqa/nbq-sdk.git?branch=NBQ-131-sdk-v1#887c704eb4e66a7ce3b7de28249a44bbb34264cc" }
+source = { git = "https://github.com/Zelinqa/nbq-sdk.git?rev=887c704eb4e66a7ce3b7de28249a44bbb34264cc#887c704eb4e66a7ce3b7de28249a44bbb34264cc" }
 dependencies = [
     { name = "httpx" },
     { name = "pydantic" },
@@ -941,7 +941,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "mcp", specifier = ">=2.2,<3" },
-    { name = "nbq", git = "https://github.com/Zelinqa/nbq-sdk.git?branch=NBQ-131-sdk-v1" },
+    { name = "nbq", git = "https://github.com/Zelinqa/nbq-sdk.git?rev=887c704eb4e66a7ce3b7de28249a44bbb34264cc" },
     { name = "pydantic", specifier = ">=2.12,<3" },
 ]
 

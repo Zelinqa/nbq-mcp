@@ -50,7 +50,9 @@ packages = ["src/nbq_mcp"]
 # branch of the SDK repository.
 # switch to PyPI after nbq 1.0.0 is published
 [tool.uv.sources]
-nbq = { git = "https://github.com/Zelinqa/nbq-sdk.git", branch = "NBQ-131-sdk-v1" }
+# Temporary until nbq 1.0.0 is on PyPI: pinned to the exact SDK commit that was
+# recette-tested, never to a moving branch. Removed by the switch in PUBLISHING.md.
+nbq = { git = "https://github.com/Zelinqa/nbq-sdk.git", rev = "887c704eb4e66a7ce3b7de28249a44bbb34264cc" }
 
 [dependency-groups]
 dev = [
